@@ -1,0 +1,1 @@
+window._env_ = {"PORT":"4002","API_URL":"https://sportvenue.onrender.com/api","LOGIN_PATH":"http://localhost:4001/#/sign-in"}
