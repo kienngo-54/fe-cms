@@ -82,3 +82,16 @@ export interface RDDeleteVenue extends RDCommon {
     venueId: string;
   };
 }
+
+export interface RDGetAllBooking extends RDCommon {
+  query?: {
+    p?: number;
+    r?: number;
+  };
+}
+export interface RDGetAllTeam extends RDCommon {
+  query?: {
+    p?: number;
+    r?: number;
+  };
+}

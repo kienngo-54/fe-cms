@@ -7,6 +7,8 @@ enum END_POINT {
   DELETE_FIELD = "/admin/field/:fieldId",
   VENUE = "/admin/venue",
   GET_VENUE = "/admin/venue/:venueId",
+  BOOKING = "/admin/booking",
+  TEAM = "/admin/team",
 }
 
 export default END_POINT;
