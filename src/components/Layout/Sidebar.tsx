@@ -41,8 +41,8 @@ export const menu = [
     icon: <CalendarOutlined />,
   },
   {
-    title: "Quản lý sân",
-    key: ROUTE.FIELD,
+    title: "Quản lý địa điểm",
+    key: ROUTE.VENUE,
     icon: <EnvironmentOutlined />,
   },
   {

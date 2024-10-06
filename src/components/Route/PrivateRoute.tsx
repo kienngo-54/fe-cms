@@ -15,6 +15,7 @@ function PrivateRoute(props: PropsWithChildren<PrivateRouteProps>) {
   const isLogin = useAppSelector((s) => s.auth.authenticated);
 
   useEffect(() => {
+    console.log(123);
     document.title = title;
   }, []);
 

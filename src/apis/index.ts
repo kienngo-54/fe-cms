@@ -18,6 +18,7 @@ import { clearData } from "../redux/slices/authSlice";
 import ROUTE from "../constants/routes";
 import { getApiErrorMess } from "../services/languages";
 import en from "../languages/en";
+import { redirectToLogin } from "../helpers";
 
 let cancelTokenSources: TCancelTokenSource[] = [];
 let getAccessTokenStatus: "init" | "waiting" | "fail" | "success" = "init";
@@ -198,7 +199,7 @@ export async function callApi<
 
       toast("Token expired", { type: "error" });
       store.dispatch(clearData());
-      window.location.hash = `#${ROUTE.LOGIN}`;
+      redirectToLogin();
     }
     // retry case: HTTP CODE in statusCodeRetry,
     if (

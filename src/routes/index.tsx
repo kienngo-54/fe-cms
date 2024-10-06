@@ -9,7 +9,8 @@ import TeamPage from "../pages/team";
 import PromotionPage from "../pages/promotion";
 import AuthPage from "../pages/auth";
 import BookingPage from "../pages/booking";
-import FieldPage from "../pages/field";
+import FieldPage from "../pages/venue/field";
+import VenuePage from "../pages/venue";
 
 interface AppRoute {
   path: ROUTE;
@@ -52,8 +53,14 @@ const routes: AppRoute[] = [
   },
   {
     path: ROUTE.FIELD,
-    title: "Quản lý vị trí sân",
+    title: "Quản lý sân",
     element: FieldPage,
+    isPrivate: true,
+  },
+  {
+    path: ROUTE.VENUE,
+    title: "Quản lý vị trí",
+    element: VenuePage,
     isPrivate: true,
   },
   {

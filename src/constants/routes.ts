@@ -5,8 +5,9 @@ enum ROUTE {
   PROMOTION = "/promotions",
   LOGIN = "/sign-in",
   AUTH = "/auth",
-  FIELD = "/field",
+  FIELD = "/venue/:venueId",
   BOOKING = "/booking",
+  VENUE = "/venue",
   PAGE_FORBIDDEN = "/403",
   PAGE_NOT_FOUND = "404",
 }
