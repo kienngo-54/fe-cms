@@ -9,6 +9,7 @@ enum END_POINT {
   GET_VENUE = "/admin/venue/:venueId",
   BOOKING = "/admin/booking",
   TEAM = "/admin/team",
+  DELETE_USER = "/admin/user/:userId",
 }
 
 export default END_POINT;

@@ -95,3 +95,9 @@ export interface RDGetAllTeam extends RDCommon {
     r?: number;
   };
 }
+
+export interface RDDeleteUser extends RDCommon {
+  param: {
+    userId: string;
+  };
+}

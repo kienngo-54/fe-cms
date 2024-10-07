@@ -1,12 +1,12 @@
 /* eslint-disable class-methods-use-this */
-const dotenv = require('dotenv-defaults');
-const fs = require('fs');
-const { DefinePlugin } = require('webpack');
+const dotenv = require("dotenv-defaults");
+const fs = require("fs");
+const { DefinePlugin } = require("webpack");
 
 class Dotenv {
   constructor(config = {}) {
     this.config = {
-      path: './.env',
+      path: "./.env",
       ...config,
     };
 
@@ -27,10 +27,10 @@ class Dotenv {
     const { defaults } = this.config;
 
     if (defaults) {
-      return this.loadFile(defaults === true ? './.env.defaults' : defaults);
+      return this.loadFile(defaults === true ? "./.env.defaults" : defaults);
     }
 
-    return '';
+    return "";
   }
 
   formatData(vars = {}) {
@@ -41,14 +41,14 @@ class Dotenv {
     });
 
     // supporting webpack 5
-    formatted['process.env'] = '{}';
+    formatted["process.env"] = "{}";
 
     return formatted;
   }
 
   loadFile(file) {
     try {
-      return fs.readFileSync(file, 'utf8');
+      return fs.readFileSync(file, "utf8");
     } catch (err) {
       this.warn(`Failed to load ${file}.`);
       return {};
@@ -59,12 +59,10 @@ class Dotenv {
     const data = `window._env_ = ${JSON.stringify(env)}`;
 
     try {
-      fs.writeFileSync('public/env-config.js', data);
-      console.log("Successfully saved the env-config.js file");
+      fs.writeFileSync("public/env-config.js", data);
     } catch (error) {
       console.log("Error writing file: ", error);
     }
-
   }
 
   warn(msg) {
